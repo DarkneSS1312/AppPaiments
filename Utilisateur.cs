@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleAppPaiments
+﻿namespace ConsoleAppPaiements
 {
-    internal class Utilisateur
+    public class Utilisateur
     {
+        public required string Nom { get; set; }
+        public List<Paiement> Paiements { get; set; } = new List<Paiement>();
+
+        public void AjouterPaiement(Paiement paiement)
+        {
+            Paiements.Add(paiement);
+        }
+
+        public void AfficherPaiements()
+        {
+            foreach (var paiement in Paiements)
+            {
+                paiement.AfficherDetails();
+            }
+        }
     }
+
 }

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleAppPaiments
+﻿namespace ConsoleAppPaiements
 {
-    internal class Paypal
+    public class PayPal : Paiement
     {
+        public required string AdresseEmail { get; set; }
+
+        public override void AfficherDetails()
+        {
+            Console.WriteLine($"PayPal : {AdresseEmail}, Montant : {Montant}, Date : {DatePaiement}");
+        }
     }
+
 }

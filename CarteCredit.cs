@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleAppPaiments
+﻿namespace ConsoleAppPaiements
 {
-    internal class CarteCredit
+    public class CarteCredit : Paiement
     {
+        public required string NumeroCarte { get; set; }
+
+        public override void AfficherDetails()
+        {
+            Console.WriteLine($"Carte de crédit : {NumeroCarte}, Montant : {Montant}, Date : {DatePaiement}");
+        }
     }
+
 }
