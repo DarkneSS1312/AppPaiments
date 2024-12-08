@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppPaiments
 {
-    internal class Class1
+    public abstract class Paiement
     {
+        public double Montant { get; set; }
+        public DateTime DatePaiement { get; set; }
+
+        public abstract void AfficherDetails();
     }
 }
